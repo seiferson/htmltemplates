@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.7.8/semantic.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/rainbow.min.css">
+    <title>CMS</title>
+  </head>
+
+  <body>
+    <div class="ui top attached menu">
+      <div class="ui item">
+        <a class="ui header" href="#">Template</a>
+      </div>
+      <div class="right menu">
+        <div class='ui borderless item'>
+          <img
+            class='ui bordered avatar image'
+            src="https://avatars.dicebear.com/v2/jdenticon/else.svg" />
+          <span>seiferson</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui container">
+      <br />
+      <br />
+      <br />
+      <div class='ui top attached menu'>
+        <div class='header item'>
+          <i class='tasks icon'></i>Routine
+        </div>
+        <div class='right menu'>
+          <div class='ui item'><i class='fitted cog icon'></i></div>
+          <div class='ui dropdown icon item' id='taskfiltermenu'>
+            <i class='fitted filter icon'></i>
+            <i class='dropdown icon'></i>
+            <div class='menu'>
+              <div class="header">Search tags</div>
+              <div class='ui input'><input type='text' /></div>
+              <div class='header'><i class='filter icon'></i>Filters</div>
+              <div class='divider'></div>
+              <div class='item' data-value={entry.name}>
+                <div class="ui blue empty circular label"></div>{entry.name}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='ui bottom attached segment'>
+        <div class='ui relaxed divided list'>
+          <div class='item'>
+            <i class="large coffee middle aligned icon"></i>
+            <div class='content'>
+              <div class='header'>Something to do</div>
+              <div class='description'><pre style="margin: 0">A short descrition of it
+that can be actually long</pre></div>
+            </div>
+          </div>
+          <div class='item'>
+            <i class="large coffee middle aligned icon"></i>
+            <div class='content'>
+              <div class='header'>Something to do</div>
+              <div class='description'><pre style="margin: 0">A short descrition of it
+that can be actually long</pre></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="ui vertical segment">
+      <div class="ui horizontal divider">Template</div>
+      <div class="ui container">
+        <div class="ten wide column">
+          <span class="ui inverted text">Information regarding this project</span>
+          <br />
+          <br />
+          <div class="ui labels">
+            <a class="ui label" href="https://github.com">
+              <i class="github icon"></i>github
+            </a>
+            <a class="ui label" href="https://github.com/">
+              <i class="code branch icon"></i>dev branch
+            </a>
+            <a class="ui label" href="https://github.com">
+              <i class="bug icon"></i>bugs
+            </a>
+            <a class="ui label" href="https://github.com">
+              <i class="project diagram icon"></i>project
+            </a>
+            <div class="ui label">
+              <i class="google icon"></i>seifer.ch
+            </div>
+            <a class="ui  label" href="https://twitter.com/Seiferson">
+              <i class="twitter icon"></i>@Seiferson
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.7.8/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+      $('#taskfiltermenu').dropdown();
+    </script>
+  </body>
+</html>
