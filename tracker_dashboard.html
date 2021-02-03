@@ -5,9 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.7.8/semantic.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/rainbow.min.css">
-    <title>CMS</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.css" />
+    <title>Tasks</title>
   </head>
 
   <body>
@@ -29,48 +28,128 @@
       <br />
       <br />
       <br />
-      <div class='ui top attached menu'>
-        <div class='header item'>
-          <i class='tasks icon'></i>Routine
+      <br />
+      <div class="ui stackable grid">
+        <!-- LEFT PANEL -->
+        <div class="eight wide column">
+
         </div>
-        <div class='right menu'>
-          <div class='ui item'><i class='fitted cog icon'></i></div>
-          <div class='ui dropdown icon item' id='taskfiltermenu'>
-            <i class='fitted filter icon'></i>
-            <i class='dropdown icon'></i>
-            <div class='menu'>
-              <div class="header">Search tags</div>
-              <div class='ui input'><input type='text' /></div>
-              <div class='header'><i class='filter icon'></i>Filters</div>
-              <div class='divider'></div>
-              <div class='item' data-value={entry.name}>
-                <div class="ui blue empty circular label"></div>{entry.name}
+
+        <!-- RIGHT PANEL -->
+        <div class="eight wide column">
+
+          <!-- TASK MENU -->
+          <div class='ui secondary menu'>
+            <div class='right menu'>
+              <div class='ui item'>
+                <i class='plus fitted icon'></i>
+              </div>
+              <div class='ui dropdown item'>
+                <i class='sort fitted icon'></i>
+                <i class='dropdown icon'></i>
+                <div class='menu'>
+                  <div class='ui item'>
+                    <i class="sort amount up icon"></i>
+                    due date
+                  </div>
+                  <div class='ui item'>
+                    <i class="sort amount down icon"></i>
+                    due date
+                  </div>
+                </div>
+              </div>
+              <div class='ui dropdown item'>
+                <i class='filter fitted icon'></i>
+                <i class='dropdown icon'></i>
+                <div class='menu'>
+                  <div class="header">
+                    <i class='search icon'></i> Search tags
+                  </div>
+                  <div class='ui input'>
+                    <input type='text' />
+                  </div>
+                  <div class="divider"></div>
+                  <div class='header'>
+                    <i class='filter icon'></i> Filters
+                  </div>
+                  <div class='ui item'>
+                    <i class="ui blue empty circular label"></i> Filter 1
+                  </div>
+                  <div class='item'>
+                    <i class="ui red empty circular label"></i> Filter 2
+                  </div>
+                </div>
+              </div>
+              <div class="ui category search item">
+                <div class="ui transparent icon input">
+                  <input class="prompt" type="text" placeholder="Search..." />
+                  <i class="search link icon"></i>
+                </div>
+                <div class="results"></div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class='ui bottom attached segment'>
-        <div class='ui relaxed divided list'>
-          <div class='item'>
-            <i class="large coffee middle aligned icon"></i>
-            <div class='content'>
-              <div class='header'>Something to do</div>
-              <div class='description'><pre style="margin: 0">A short descrition of it
-that can be actually long</pre></div>
+
+          <!-- TASK LIST -->
+          <div class="ui relaxed divided list">
+            <div class="item" onclick="$('#modal').modal('show');">
+              <i class="square outline large teal icon"></i>
+              <div class="content">
+                <div class="header">Floated Icon</div>
+                <div class="description">
+                  This text will always have a left margin to
+                  make sure it sits alongside your icon
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="check square outline large green icon"></i>
+              <div class="content">
+                <div class="header">Icon Alignment</div>
+                <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="check square outline large green icon"></i>
+              <div class="content">
+                <div class="header">Icon Alignment</div>
+                <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="check square outline large green icon"></i>
+              <div class="content">
+                <div class="header">Icon Alignment</div>
+                <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="check square outline large green icon"></i>
+              <div class="content">
+                <div class="header">Icon Alignment</div>
+                <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+              </div>
             </div>
           </div>
-          <div class='item'>
-            <i class="large coffee middle aligned icon"></i>
-            <div class='content'>
-              <div class='header'>Something to do</div>
-              <div class='description'><pre style="margin: 0">A short descrition of it
-that can be actually long</pre></div>
-            </div>
+
+          <!-- PAGINATION -->
+          <br />
+          <div class="three ui buttons">
+            <button class="ui tertiary button">
+              <i class="left chevron icon"></i>
+              Prev
+            </button>
+            <button class="ui tertiary disabled black button">
+              1/2
+            </button>
+            <button class="ui tertiary button">
+              Next
+              <i class="right chevron icon"></i>
+            </button>
           </div>
-        </div>
-      </div>
-    </div>
+        </div><!-- RIGHT PANEL END -->
+      </div><!-- GRID END -->
+    </div><!-- CONTAINER END -->
 
     <br />
     <br />
@@ -101,17 +180,46 @@ that can be actually long</pre></div>
               <i class="twitter icon"></i>@Seiferson
             </a>
           </div>
+        </div>
+      </div>
+    </div>
 
+
+    <div class="ui basic modal" id="modal">
+      <div class="content">
+        <div class='ui fluid card'>
+          <div class='content'>
+            <i class="right floated trash alternate outline grey icon"></i>
+            <i class="right floated edit outline grey icon"></i>
+            <div class='header'>{this.props.task.title}</div>
+            <div class='meta'>
+              {formattedDate}
+              <span class='right floated'>Due {dueDateFormatted}</span>
+            </div>
+            <div class='description'>
+              <p>Description here</p>
+            </div>
+            <br />
+            <div class="ui labels">
+              <div class="ui small teal label"><i class="tag icon"></i>{entry}</div>
+              <div class="ui small teal label"><i class="tag icon"></i>{entry}</div>
+              <div class="ui small teal label"><i class="tag icon"></i>{entry}</div>
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+              <img class="ui avatar image" src="https://avatars.dicebear.com/v2/jdenticon/elperrito.svg"/> {this.props.task.id}
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.7.8/semantic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.min.js"></script>
     <script type="text/javascript">
-      $('#taskfiltermenu').dropdown();
+      $('.dropdown').dropdown();
+      $("#modal").modal();
     </script>
   </body>
 </html>
