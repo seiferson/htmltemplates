@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.7.8/semantic.css">
+    <link rel="icon" type="image/png" href="#">
+    <title>Docker Dashboard</title>
+  </head>
+  <body>
+
+    <div class="ui top attached menu">
+      <div class="ui item">
+        <a class="ui header" href="#">Docker Dashboard</a>
+      </div>
+    </div>
+
+    <div class="ui container">
+      <br />
+      <br />
+      <br />
+
+      <div class="ui stackable grid">
+
+        <div class="six wide column">
+          <div class="ui middle aligned animated selection list">
+            <div class="active item">
+              <i class="docker teal icon"></i>
+              <div class="content">
+                <div class="header">US MDC1</div>
+                <div class="description">slc12hfn.us.oracle.com</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="docker yellow icon"></i>
+              <div class="content">
+                <div class="header">US MDC2</div>
+                <div class="description">slc11brz.us.oracle.com</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="docker red icon"></i>
+              <div class="content">
+                <div class="header">MUMBAI MDC3</div>
+                <div class="description">slc10hfn.us.oracle.com</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui vertical fluid menu">
+            <a class="item" data-tab="status">
+              <i class="server icon"></i> Status
+            </a>
+            <a class="item" data-tab="management">
+              <i class="wrench icon"></i> Management
+            </a>
+            <a class="item" data-tab="deployment">
+              <i class="rocket icon"></i> Deployment
+            </a>
+          </div>
+        </div><!-- Left panel END-->
+
+        <div class="ten wide column">
+
+          <div class="ui tab" data-tab="status">
+          <div class="ui segment">
+            <h4 class="ui header">Users list</h4>
+            <div class="ui relaxed divided list">
+              <div class="item">
+                <i class="large user outline middle aligned icon"></i>
+                <div class="content">
+                  <div class="header">cuherrer</div>
+                  <div class="description">2 hours left</div>
+                </div>
+              </div>
+              <div class="item">
+                <i class="large user outline middle aligned icon"></i>
+                <div class="content">
+                  <div class="header">sgogonza</div>
+                  <div class="description">2 hours left</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div class="ui middle aligned list" >
+
+            <div class="item">
+              <i class="server icon"></i>
+              <div class="content">
+                <div class="header">Server status</div>
+                <div class="description"><span class="ui teal text">Up</span> slc12hfn.us.oracle.com</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="database icon"></i>
+              <div class="content">
+                <div class="header">Database status</div>
+                <div class="description"><span class="ui teal text">Up</span> slc12hfn.us.oracle.com:1521/edm143</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="docker icon"></i>
+              <div class="content">
+                <div class="header">Docker status</div>
+                <div class="description"><span class="ui teal text">Up</span> <a href="#">slc12hfn.us.oracle.com:7011/fscmUI</a></div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="redo icon"></i>
+              <div class="content">
+                <div class="header">Last docker image refresh</div>
+                <div class="description">2 days ago [5/8/2021 15:00 CST]</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="redo icon"></i>
+              <div class="content">
+                <div class="header">Last database refresh</div>
+                <div class="description">1 month ago [5/8/2021 15:00 CST]</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="bug icon"></i>
+              <div class="content">
+                <div class="header">Debugger</div>
+                <div class="description"><span class="ui teal text">Enabled</span></div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="code icon"></i>
+              <div class="content">
+                <div class="header">REST API</div>
+                <div class="description"><span class="ui teal text">Up</span> slc12hfn.us.oracle.com:7011/fscmUI/rest</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="code icon"></i>
+              <div class="content">
+                <div class="header">SOA services</div>
+                <div class="description"><span class="ui teal text">Up</span></div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+          <div class="ui tab" data-tab="management">
+            <div class="ui vertical labeled icon basic buttons">
+              <button class="ui button">
+                <i class="sync icon"></i>Full refresh docker env
+              </button>
+              <button class="ui button">
+                <i class="power off icon"></i>Restart docker env
+              </button>
+              <button class="ui button">
+                <i class="file archive outline icon"></i>Replace SMC apps
+              </button>
+            </div>
+            <br />
+            <br />
+            <br />
+            <form class="ui form">
+              <div class="inline field">
+                <div class="ui toggle checkbox">
+                  <input type="checkbox" tabindex="0" class="hidden">
+                  <label><i class="bug icon"></i> Debugger</label>
+                </div>
+              </div>
+              <div class="inline field">
+                <div class="ui toggle checkbox">
+                  <input type="checkbox" tabindex="0" class="hidden">
+                  <label><i class="file icon"></i> FA logs</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+          <div class="ui tab" data-tab="deployment">
+            <div class="ui segment">
+              <h4 class="ui header">Deployment queue</h4>
+              <div class="ui relaxed divided selection list">
+                <div class="item" onclick="$('.ui.modal').modal('show')">
+                  <i class="large file code outline middle aligned icon"></i>
+                  <div class="content">
+                    <div class="header">cuherrer_bug452344</div>
+                    <div class="description">Added 2 hours ago</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="large file code outline middle aligned icon"></i>
+                  <div class="content">
+                    <div class="header">cuherrer_bug5444</div>
+                    <div class="description">Added 2 hours ago</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="large file code outline middle aligned icon"></i>
+                  <div class="content">
+                    <div class="header">cuherrer_bug43453</div>
+                    <div class="description">Added 2 hours ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="ui dividing header">Add to queue</h4>
+            <form class="ui form">
+              <div class="field">
+                <label>transaction</label>
+                <input type="text" name="transaction" />
+              </div>
+              <button class="ui button" type="submit"><i class="rocket icon"></i> Deploy</button>
+            </form>
+          </div>
+        </div><!-- Right panel END-->
+
+      </div><!-- Grid END-->
+
+    </div><!-- Container END-->
+
+
+
+    <br />
+    <br />
+    <div class="ui vertical segment">
+      <div class="ui horizontal divider">Fusionapps financials</div>
+      <div class="ui container">
+        <div class="ten wide column">
+          <span class="ui inverted text">Information regarding this project</span>
+          <br />
+          <br />
+          <div class="ui labels">
+            <a class="ui label" href="https://github.com">
+              <i class="confluence icon"></i>Confluence page of this project
+            </a>
+            <div class="ui label">
+              <i class="envelope icon"></i>cuauhtemoc.herrera@oracle.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui modal" id="authmodal">
+      <div class="content">
+        <div class="ui icon message">
+          <i class="file code outline icon"></i>
+          <div class='content'>
+            <div class='header'>cuherrer_bug5444</div>
+
+            <br />
+            <b>Files in transaction</b>
+            <div class="ui list">
+              <div class="item">fusionapps/fin/ar/receipts/file.java</div>
+              <div class="item">fusionapps/fin/ar/receipts/file.java</div>
+              <div class="item">fusionapps/fin/ar/receipts/file.java</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.7.8/semantic.min.js"></script>
+    <script>
+      $('.menu .item').tab();
+      $('.ui.checkbox').checkbox();
+    </script>
+  </body>
+</html>
