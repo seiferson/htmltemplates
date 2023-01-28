@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.css" />
+    <title>Tasks</title>
+  </head>
+
+  <body>
+    <div class="ui top attached menu">
+      <div class="ui item">
+        <a class="ui header" href="#">Template</a>
+      </div>
+      <div class="right menu">
+        <div class='ui borderless item'>
+          <img
+            class='ui bordered avatar image'
+            src="https://avatars.dicebear.com/v2/jdenticon/else.svg" />
+          <span>seiferson</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui container">
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="ui stackable grid">
+        <!-- LEFT PANEL -->
+        <div class="eight wide column">
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="eight wide column">
+
+          <!-- TASK MENU -->
+          <div class='ui secondary menu'>
+            <div class='right menu'>
+              <div class='ui item'>
+                <i class='plus fitted icon'></i>
+              </div>
+              <div class='ui dropdown item'>
+                <i class='sort fitted icon'></i>
+                <i class='dropdown icon'></i>
+                <div class='menu'>
+                  <div class='ui item'>
+                    <i class="sort amount up icon"></i>
+                    due date
+                  </div>
+                  <div class='ui item'>
+                    <i class="sort amount down icon"></i>
+                    due date
+                  </div>
+                </div>
+              </div>
+              <div class='ui dropdown item'>
+                <i class='filter fitted icon'></i>
+                <i class='dropdown icon'></i>
+                <div class='menu'>
+                  <div class="header">
+                    <i class='search icon'></i> Search tags
+                  </div>
+                  <div class='ui input'>
+                    <input type='text' />
+                  </div>
+                  <div class="divider"></div>
+                  <div class='header'>
+                    <i class='filter icon'></i> Filters
+                  </div>
+                  <div class='ui item'>
+                    <i class="ui blue empty circular label"></i> Filter 1
+                  </div>
+                  <div class='item'>
+                    <i class="ui red empty circular label"></i> Filter 2
+                  </div>
+                </div>
+              </div>
+              <div class="ui category search item">
+                <div class="ui transparent icon input">
+                  <input class="prompt" type="text" placeholder="Search..." />
+                  <i class="search link icon"></i>
+                </div>
+                <div class="results"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TASK LIST -->
+          <div class="ui relaxed divided list">
+            <div class="item" onclick="$('#modal').modal('show');">
+              <i class="square outline large teal icon"></i>
+              <div class="content">
+                <div class="header">Floated Icon</div>
+                <div class="description">
+                  This text will always have a left margin to
+                  make sure it sits alongside your icon
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="check square outline large green icon"></i>
+              <div class="content">
+                <div class="header">Icon Alignment</div>
+                <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="check square outline large green icon"></i>
+              <div class="content">
+                <div class="header">Icon Alignment</div>
+                <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="check square outline large green icon"></i>
+              <div class="content">
+                <div class="header">Icon Alignment</div>
+                <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="check square outline large green icon"></i>
+              <div class="content">
+                <div class="header">Icon Alignment</div>
+                <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAGINATION -->
+          <br />
+          <div class="three ui buttons">
+            <button class="ui tertiary button">
+              <i class="left chevron icon"></i>
+              Prev
+            </button>
+            <button class="ui tertiary disabled black button">
+              1/2
+            </button>
+            <button class="ui tertiary button">
+              Next
+              <i class="right chevron icon"></i>
+            </button>
+          </div>
+        </div><!-- RIGHT PANEL END -->
+      </div><!-- GRID END -->
+    </div><!-- CONTAINER END -->
+
+    <br />
+    <br />
+    <div class="ui vertical segment">
+      <div class="ui horizontal divider">Template</div>
+      <div class="ui container">
+        <div class="ten wide column">
+          <span class="ui inverted text">Information regarding this project</span>
+          <br />
+          <br />
+          <div class="ui labels">
+            <a class="ui label" href="https://github.com">
+              <i class="github icon"></i>github
+            </a>
+            <a class="ui label" href="https://github.com/">
+              <i class="code branch icon"></i>dev branch
+            </a>
+            <a class="ui label" href="https://github.com">
+              <i class="bug icon"></i>bugs
+            </a>
+            <a class="ui label" href="https://github.com">
+              <i class="project diagram icon"></i>project
+            </a>
+            <div class="ui label">
+              <i class="google icon"></i>seifer.ch
+            </div>
+            <a class="ui  label" href="https://twitter.com/Seiferson">
+              <i class="twitter icon"></i>@Seiferson
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="ui basic modal" id="modal">
+      <div class="content">
+        <div class='ui fluid card'>
+          <div class='content'>
+            <i class="right floated trash alternate outline grey icon"></i>
+            <i class="right floated edit outline grey icon"></i>
+            <div class='header'>{this.props.task.title}</div>
+            <div class='meta'>
+              {formattedDate}
+              <span class='right floated'>Due {dueDateFormatted}</span>
+            </div>
+            <div class='description'>
+              <p>Description here</p>
+            </div>
+            <br />
+            <div class="ui labels">
+              <div class="ui small teal label"><i class="tag icon"></i>{entry}</div>
+              <div class="ui small teal label"><i class="tag icon"></i>{entry}</div>
+              <div class="ui small teal label"><i class="tag icon"></i>{entry}</div>
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+              <img class="ui avatar image" src="https://avatars.dicebear.com/v2/jdenticon/elperrito.svg"/> {this.props.task.id}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.min.js"></script>
+    <script type="text/javascript">
+      $('.dropdown').dropdown();
+      $("#modal").modal();
+    </script>
+  </body>
+</html>
